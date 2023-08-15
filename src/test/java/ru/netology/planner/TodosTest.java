@@ -1,6 +1,6 @@
 package ru.netology.planner;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class TodosTest {
@@ -62,7 +62,7 @@ public class TodosTest {
 
         Meeting meeting = new Meeting(
                 555,
-                "Выкатка 3й версии приложения",
+                "Позвонить",
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
         );
@@ -73,7 +73,7 @@ public class TodosTest {
         todos.add(meeting);
 
         Task[] expected = {simpleTask, meeting};
-        Task[] actual = todos.search("Приложение НетоБанка");
+        Task[] actual = todos.search("Позвонить");
         Assertions.assertArrayEquals(expected, actual);
     }
 
